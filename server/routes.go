@@ -39,5 +39,11 @@ func getRoutes(dbHandler *controllers.DBHandler) []Route {
 			"/mentor/form/",
 			middleware.WithLogin(dbHandler.RegisterMentor),
 		},
+		{
+			"Project Registration",
+			"POST",
+			"/project/add/",
+			middleware.WithLogin(dbHandler.RegisterProject),
+		},
 	}
 }
